@@ -1,50 +1,17 @@
-name: Deploy to GitHub pages
+name: Deploy
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.18.0]
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Deploy
-        run: |
-          git config --global user.name $user_name
-          git config --global user.email $user_email
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
-        env:
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          github_token: ${{ secrets.DEPLOY_SECRET }}
-          repository: ${{ github.repository }}
-          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
-          CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
-          NEXT_PUBLIC_CLERK_SIGN_IN_URL: ${{ secrets.NEXT_PUBLIC_CLERK_SIGN_IN_URL }}
-          NEXT_PUBLIC_CLERK_SIGN_UP_URL: ${{ secrets.NEXT_PUBLIC_CLERK_SIGN_UP_URL }}
-          NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: ${{ secrets.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL }}
-          NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: ${{ secrets.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          UPLOADTHING_SECRET: ${{ secrets.UPLOADTHING_SECRET }}
-          UPLOADTHING_APP_ID: ${{ secrets.UPLOADTHING_APP_ID }}
-          MUX_TOKEN_ID: ${{ secrets.MUX_TOKEN_ID }}
-          MUX_TOKEN_SECRET: ${{ secrets.MUX_TOKEN_SECRET }}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'nextjs-udemy-clone' #Must be unique in Heroku
+          heroku_email: 'street.baller06@gmail.com'
