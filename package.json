@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d .next"
+    "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@clerk/localizations": "^1.26.2",
@@ -40,6 +40,7 @@
     "react-quill": "^2.0.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7",
+    "touch-cli": "^0.0.1",
     "uploadthing": "^5.7.1",
     "zod": "^3.22.4"
   },
