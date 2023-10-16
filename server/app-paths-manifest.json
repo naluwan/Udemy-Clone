@@ -1,0 +1,23 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/courses/route": "app/api/courses/route.js",
+  "/api/uploadthing/route": "app/api/uploadthing/route.js",
+  "/api/courses/[courseId]/route": "app/api/courses/[courseId]/route.js",
+  "/(dashboard)/(routes)/page": "app/(dashboard)/(routes)/page.js",
+  "/(dashboard)/(routes)/search/page": "app/(dashboard)/(routes)/search/page.js",
+  "/api/courses/[courseId]/attachments/route": "app/api/courses/[courseId]/attachments/route.js",
+  "/api/courses/[courseId]/chapters/route": "app/api/courses/[courseId]/chapters/route.js",
+  "/(auth)/(routes)/sign-in/[[...sign-in]]/page": "app/(auth)/(routes)/sign-in/[[...sign-in]]/page.js",
+  "/(auth)/(routes)/sign-up/[[...sign-up]]/page": "app/(auth)/(routes)/sign-up/[[...sign-up]]/page.js",
+  "/(dashboard)/(routes)/admin/analytics/page": "app/(dashboard)/(routes)/admin/analytics/page.js",
+  "/(dashboard)/(routes)/admin/courses/page": "app/(dashboard)/(routes)/admin/courses/page.js",
+  "/(dashboard)/(routes)/admin/create/page": "app/(dashboard)/(routes)/admin/create/page.js",
+  "/api/courses/[courseId]/attachments/[attachmentId]/route": "app/api/courses/[courseId]/attachments/[attachmentId]/route.js",
+  "/api/courses/[courseId]/chapters/[chapterId]/route": "app/api/courses/[courseId]/chapters/[chapterId]/route.js",
+  "/api/courses/[courseId]/chapters/reorder/route": "app/api/courses/[courseId]/chapters/reorder/route.js",
+  "/(dashboard)/(routes)/admin/courses/[courseId]/page": "app/(dashboard)/(routes)/admin/courses/[courseId]/page.js",
+  "/api/courses/[courseId]/chapters/[chapterId]/publish/route": "app/api/courses/[courseId]/chapters/[chapterId]/publish/route.js",
+  "/api/courses/[courseId]/chapters/[chapterId]/unpublish/route": "app/api/courses/[courseId]/chapters/[chapterId]/unpublish/route.js",
+  "/(dashboard)/(routes)/admin/courses/[courseId]/chapters/[chapterId]/page": "app/(dashboard)/(routes)/admin/courses/[courseId]/chapters/[chapterId]/page.js"
+}
