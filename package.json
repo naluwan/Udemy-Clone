@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build && npm run export && touch ./out/.nojekyll",
+    "predeploy": "npm run build && touch ./out/.nojekyll",
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
@@ -66,5 +66,8 @@
     "prisma": "^5.4.1",
     "tailwindcss": "latest",
     "typescript": "latest"
+  },
+  "engines": {
+    "node": "18.18.0"
   }
 }
