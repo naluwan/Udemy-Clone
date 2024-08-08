@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 const guestRoutes = [
   {
     icon: Layout,
-    label: 'Dashboard',
+    label: 'Dashboardtest',
     href: '/',
   },
   {

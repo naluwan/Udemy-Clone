@@ -96,7 +96,7 @@ export const CategoryForm = ({ initialData, courseId, options }: CategoryFormPro
                 return (
                   <FormItem>
                     <FormControl>
-                      <Combobox options={...options} onChange={onChange} value={value} />
+                      <Combobox options={options} onChange={onChange} value={value} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
